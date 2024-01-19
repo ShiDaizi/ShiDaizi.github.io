@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "ShiDaizi"
   avatar           : "https://avatars.githubusercontent.com/u/157120237?s=400&u=bb1ae5c27d5bf729c3c5f9db1ad72c5f598c2bee&v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **secret** person."
+  bio              : "I am a **secret** person."
   location         : "China"
   email            :
   links:
