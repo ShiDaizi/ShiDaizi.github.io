@@ -6,7 +6,7 @@ main:
     url: https://shidaizi.github.io/sample-page/
   - title: "Sample Posts"
     url: /year-archive/
-  - title: "Sample Collections"
-    url: /collection-archive/
+  - title: "Sample Category"
+    url: /categories/
   # - title: "Sitemap"
   #   url: /sitemap/
