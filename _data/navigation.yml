@@ -1,14 +1,14 @@
 # main links
 main:
   - title: "Home"
-  - url : https://shidaizi.github.io/
+    url : https://shidaizi.github.io/
   - title: "Blog"
-  - url: /blog/
+    url: /blog/
   - title: "Category"
-  - url: /categories/
+    url: /categories/
   - title: "Tag"
-  - url: /tags/
+    url: /tags/
   - title: "About"
-  - url: /about/
+    url: /about/
   # - title: "Sitemap"
   #   url: /sitemap/
