@@ -3,7 +3,7 @@ main:
   - title: "Home"
   - url : https://shidaizi.github.io/
   - title: "Blog"
-  -  url: /blog/
+  - url: /blog/
   - title: "Category"
   - url: /categories/
   - title: "Tag"
