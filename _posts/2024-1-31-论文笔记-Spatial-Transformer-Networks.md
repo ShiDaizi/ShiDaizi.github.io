@@ -22,9 +22,11 @@ CNN网络具有平移不变性，简单地说，卷积+最大池化约等于平�
 
 STN对feature map（包括输入图像）进行空间变换，输出一张新的图像。我们希望STN对feature map进行变换后能把图像纠正到成理想的图像，然后丢进网络去识别。下图中，通过对输入的MNIST图像(a)进行STN变换后得到理想的数字图像(c)，以便于网络对图像进行识别(d)。
 
-![image-20240131202407717](C:\Users\wang_sj\AppData\Roaming\Typora\typora-user-images\image-20240131202407717.png)
+![image-20240131202407717](..\assets\images\STN_1.png)
 
 STN将输入图像$$U$$输入网络，生成形变场$$\mathcal{T}_{\theta}$$，其中$$\theta$$为网络输出的参数，形变场依据$$\theta$$生成。具体的，对于目标图像的网格$$G$$，$$G_i=(x_i^s,y_i^s)$$即表示生成图像$$x_i^t,x_j^t$$坐标点的像素取自原图的$$x_i^s,y_i^s$$像素点。以仿射变换为例：
+
+
 $$
 \begin{equation*}
 \begin{pmatrix}
@@ -45,11 +47,13 @@ x_i^t\\ y_i^t\\ 1
 x_i^t\\ y_i^t\\ 1
 \end{pmatrix}
 $$
+
+
 其中第三维度数字$$1$$表示平移变换(Translation)。
 
 网络结构如下图：
 
-![image-20240131204416680](C:\Users\wang_sj\AppData\Roaming\Typora\typora-user-images\image-20240131204416680.png)
+![image-20240131204416680](..\assets\images\STN_1.png)
 
 ### Differentiable Image Sampling
 
@@ -62,17 +66,25 @@ $$
 其中$$U$$，$$V$$分别是$$H\times W\times C$$和$$H'\times W'\times C'$$的图像，上下标对应像素点与通道，$$\Phi_x,\Phi_y$$是核函数$$k()$$的参数。
 
 一般采用双线性插值（bilinear sampling）：
+
+
 $$
 \begin{align*}
 V_i^c = \sum\limits_{n}^{H}\sum\limits_{m}^{W}U_{nm}^{c}\times \max(0,1-|x_i^s-m|)\times\max(0, 1-|y_i^s-n|)\forall i\in[1,H'W']\forall c\in[1..C]
 \end{align*}
 $$
+
+
 也有integer sampling kernel：
+
+
 $$
 \begin{align*}
 V_i^c = \sum\limits_{n}^{H}\sum\limits_{m}^{W}U_{nm}^{c}\times \delta(\lfloor x_i^s+0.5\rfloor -m)\times\delta(\lfloor y_i^s+0.5\rfloor-n)\forall i\in[1,H'W']\forall c\in[1..C]
 \end{align*}
 $$
+
+
 $$\lfloor x\rfloor$$表示对$$x$$进行四舍五入操作。
 
 
