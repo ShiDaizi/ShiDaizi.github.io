@@ -5,6 +5,7 @@ categories:
 tags:
   - Image Registration
 mathjax: true
+classes: wide
 ---
 
 
