@@ -22,7 +22,7 @@ CNN网络具有平移不变性，简单地说，卷积+最大池化约等于平�
 
 STN对feature map（包括输入图像）进行空间变换，输出一张新的图像。我们希望STN对feature map进行变换后能把图像纠正到成理想的图像，然后丢进网络去识别。下图中，通过对输入的MNIST图像(a)进行STN变换后得到理想的数字图像(c)，以便于网络对图像进行识别(d)。
 
-![image-20240131202407717](\blog\assets\images\STN_1.png)
+![image-20240131202407717]("\assets\images\STN_1.png")
 
 STN将输入图像$$U$$输入网络，生成形变场$$\mathcal{T}_{\theta}$$，其中$$\theta$$为网络输出的参数，形变场依据$$\theta$$生成。具体的，对于目标图像的网格$$G$$，$$G_i=(x_i^s,y_i^s)$$即表示生成图像$$x_i^t,x_j^t$$坐标点的像素取自原图的$$x_i^s,y_i^s$$像素点。以仿射变换为例：
 
@@ -53,7 +53,7 @@ $$
 
 网络结构如下图：
 
-![image-20240131204416680](\blog\assets\images\STN_2.png)
+![image-20240131204416680]("\assets\images\STN_2.png")
 
 ### Differentiable Image Sampling
 
