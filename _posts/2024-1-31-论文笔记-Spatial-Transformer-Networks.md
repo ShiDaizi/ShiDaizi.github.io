@@ -1,16 +1,15 @@
 ---
 title: "论文笔记：Spatial Transformer Network"
 categories:
-  - Post Formats
-tags:
   - Thesis Notes
+tags:
+  - Image Registration
+mathjax: true
 ---
 
 
 
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+
 
 论文：https://proceedings.neurips.cc/paper_files/paper/2015/hash/33ceb07bf4eeb3da587e268d663aba1a-Abstract.html
 
