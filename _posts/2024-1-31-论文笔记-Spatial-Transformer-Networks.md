@@ -101,6 +101,6 @@ $$\lfloor x\rfloor$$表示对$$x$$进行四舍五入操作。
 
 ### Conclusion
 
-STN模块可以插入CNN网络中作为一个独立模块以提高网络准确性。另外，STN所提出的形变场也可以利用与图像配准领域(Image Registration)
+STN模块可以插入CNN网络中作为一个独立模块以提高网络准确性。另外，STN所提出的形变场也可以利用与图像配准领域(Image Registration)。
 
 {: style="text-align: justify;"}
