@@ -53,16 +53,20 @@ $$
 
 网络结构如下图：
 
-![image-20240131204416680](..\assets\images\STN_1.png)
+![image-20240131204416680](..\assets\images\STN_2.png)
 
 ### Differentiable Image Sampling
 
-为了实现sample之后的图像关于网络参数$\theta$是可导的，论文采用了下述的计算公式：
+为了实现sample之后的图像关于网络参数$$\theta$$是可导的，论文采用了下述的计算公式：
+
+
 $$
 \begin{equation*}
 V_i^c = \sum\limits_{n}^{H}\sum\limits_{m}^{W}U_{nm}^{c}k(x_i^s - m, \Phi_x)k(y_i^s-n,\Phi_y)\forall i\in[1,H'W']\forall c\in[1..C]
 \end{equation*}
 $$
+
+
 其中$$U$$，$$V$$分别是$$H\times W\times C$$和$$H'\times W'\times C'$$的图像，上下标对应像素点与通道，$$\Phi_x,\Phi_y$$是核函数$$k()$$的参数。
 
 一般采用双线性插值（bilinear sampling）：
