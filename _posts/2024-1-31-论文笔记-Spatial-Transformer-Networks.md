@@ -23,7 +23,7 @@ STN对feature map（包括输入图像）进行空间变换，输出一张新的
 
 ![image-20240131202407717](C:\Users\wang_sj\AppData\Roaming\Typora\typora-user-images\image-20240131202407717.png)
 
-STN将输入图像$U$输入网络，生成形变场$\mathcal{T}_{\theta}$，其中$\theta$为网络输出的参数，形变场依据$\theta$生成。具体的，对于目标图像的网格$G$，$G_i=(x_i^s,y_i^s)$即表示生成图像$x_i^t,x_j^t$坐标点的像素取自原图的$x_i^s,y_i^s$像素点。以仿射变换为例：
+STN将输入图像$$U$$输入网络，生成形变场$$\mathcal{T}_{\theta}$$，其中$$\theta$$为网络输出的参数，形变场依据$$\theta$$生成。具体的，对于目标图像的网格$$G$$，$$G_i=(x_i^s,y_i^s)$$即表示生成图像$$x_i^t,x_j^t$$坐标点的像素取自原图的$$x_i^s,y_i^s$$像素点。以仿射变换为例：
 $$
 \begin{equation*}
 \begin{pmatrix}
@@ -44,7 +44,7 @@ x_i^t\\ y_i^t\\ 1
 x_i^t\\ y_i^t\\ 1
 \end{pmatrix}
 $$
-其中第三维度数字$1$表示平移变换(Translation)。
+其中第三维度数字$$1$$表示平移变换(Translation)。
 
 网络结构如下图：
 
@@ -58,7 +58,7 @@ $$
 V_i^c = \sum\limits_{n}^{H}\sum\limits_{m}^{W}U_{nm}^{c}k(x_i^s - m, \Phi_x)k(y_i^s-n,\Phi_y)\forall i\in[1,H'W']\forall c\in[1..C]
 \end{equation*}
 $$
-其中$U$，$V$分别是$H\times W\times C$和$H'\times W'\times C'$的图像，上下标对应像素点与通道，$\Phi_x,\Phi_y$是核函数$k()$的参数。
+其中$$U$$，$$V$$分别是$$H\times W\times C$$和$$H'\times W'\times C'$$的图像，上下标对应像素点与通道，$$\Phi_x,\Phi_y$$是核函数$$k()$$的参数。
 
 一般采用双线性插值（bilinear sampling）：
 $$
@@ -72,7 +72,7 @@ $$
 V_i^c = \sum\limits_{n}^{H}\sum\limits_{m}^{W}U_{nm}^{c}\times \delta(\lfloor x_i^s+0.5\rfloor -m)\times\delta(\lfloor y_i^s+0.5\rfloor-n)\forall i\in[1,H'W']\forall c\in[1..C]
 \end{align*}
 $$
-$\lfloor x\rfloor$表示对$x$进行四舍五入操作。
+$$\lfloor x\rfloor$$表示对$$x$$进行四舍五入操作。
 
 
 
