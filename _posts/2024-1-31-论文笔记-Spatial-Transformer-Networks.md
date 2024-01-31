@@ -6,6 +6,8 @@ tags:
   - Image Registration
 mathjax: true
 classes: wide
+header:
+  teaser: /assets/images/STN_2.png
 ---
 
 
