@@ -12,11 +12,15 @@ classes: wide
 
 
 
-论文：https://proceedings.neurips.cc/paper_files/paper/2015/hash/33ceb07bf4eeb3da587e268d663aba1a-Abstract.html
+论文：[https://proceedings.neurips.cc/paper_files/paper/2015/hash/33ceb07bf4eeb3da587e268d663aba1a-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2015/hash/33ceb07bf4eeb3da587e268d663aba1a-Abstract.html)
+
+{: style="text-align: justify;"}
 
 ### 平移不变性(Translation Invariance)
 
 CNN网络具有平移不变性，简单地说，卷积+最大池化约等于平移不变性。当目标在池化单元（Max pooling）内任意变换的话，激活的值可能是相同的，这就带来了一点点的不变性。但是池化单元一般都很小（一般是2*2），只有在深层的时候特征被处理成很小的feature map的时候这种情况才会发生。
+
+{: style="text-align: justify;"}
 
 ### Spatial Transformer Network(STN)
 
@@ -55,6 +59,8 @@ $$
 
 ![STN_2]({{ site.url }}{{ site.baseurl }}/assets/images/STN_2.png){: .align-center}
 
+{: style="text-align: justify;"}
+
 ### Differentiable Image Sampling
 
 为了实现sample之后的图像关于网络参数$$\theta$$是可导的，论文采用了下述的计算公式：
@@ -91,8 +97,10 @@ $$
 
 $$\lfloor x\rfloor$$表示对$$x$$进行四舍五入操作。
 
-
+{: style="text-align: justify;"}
 
 ### Conclusion
 
 STN模块可以插入CNN网络中作为一个独立模块以提高网络准确性。另外，STN所提出的形变场也可以利用与图像配准领域(Image Registration)
+
+{: style="text-align: justify;"}
