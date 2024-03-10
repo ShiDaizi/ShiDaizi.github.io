@@ -28,7 +28,7 @@ STN对feature map（包括输入图像）进行空间变换，输出一张新的
 
 ![STN_1]({{ site.url }}{{ site.baseurl }}/assets/images/STN_1.png){: .align-center}
 
-STN将输入图像$$U$$输入网络，生成形变场$$\mathcal{T}_{\theta}$$，其中$$\theta$$为网络输出的参数，形变场依据$$\theta$$生成。具体的，对于目标图像的网格$$G$$，$$G_i=(x_i^s,y_i^s)$$即表示生成图像$$x_i^t,x_j^t$$坐标点的像素取自原图的$$x_i^s,y_i^s$$像素点。以仿射变换为例：
+STN将输入图像$$U$$输入网络，生成形变场$$\mathcal{T}_{\theta}$$，其中$$\theta$$为网络输出的参数，形变场依据$$\theta$$生成。具体的，对于目标图像的网格$$G$$，$$G_i=(x_i^s,y_i^s)$$即表示生成图像$$x_i^t,y_i^t$$坐标点的像素取自原图的$$x_i^s,y_i^s$$像素点。以仿射变换为例：
 
 
 $$
